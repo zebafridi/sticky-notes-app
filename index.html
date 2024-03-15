@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task manage</title>
+    <style>
+        body{
+            background-color: rgb(238, 238, 238);
+            display: flex;
+        }
+        #mainDiv{
+            /* background-color: gray; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-left: 4rem;
+            border-radius: 1rem;
+            /* height: 8rem; */
+            min-height: 7rem;
+            width: 14rem;
+            border: 1px solid black;
+            margin-top: 6rem;
+            display: flex;
+            flex-direction: column;
+            padding: .5rem 3rem;
+        }
+        #input{
+            /* margin-top: 0rem; */
+            border-radius: 3rem;
+            margin-top: .5rem;
+            height: 1.5rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border: 2px solid black;
+
+        }
+        #input:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+        #task{
+            border: 3px solid rgb(181, 230, 182);
+            /* background-color: white; */
+            width: auto;
+            min-height: 1rem;
+            margin: .5rem 0rem .5rem 0rem;
+            padding: .5rem .1rem 0.5rem 1rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            /* text-align: center; */
+            /* margin: .4rem auto; */
+        }
+        #btn1{
+            margin-bottom: .5rem;
+            background-color: rgb(175, 176, 177);
+            border-radius: 2rem;
+            height: 1.8rem;
+        }
+        #button{
+            margin-bottom: .5rem;
+            background-color: rgb(175, 176, 177);
+            border-radius: 2rem;
+            height: 1.8rem
+        }
+        #btn1:hover{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: rgb(94, 92, 92);
+            color: white;
+         }
+         #button:hover{
+              box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: rgb(94, 92, 92);
+            color: white;
+         }
+
+    </style>
+</head>
+<body>
+  
+
+        <button id="btn1">New Task</button>
+
+   
+    
+
+
+    <script>
+  let btn1=document.getElementById("btn1");
+
+  let mainDiv=document.createElement("mainDiv");
+      mainDiv.setAttribute("id","mainDiv")
+      document.body.appendChild(mainDiv)
+      let input=document.createElement("input");
+      input.setAttribute("id", "input")
+      
+      mainDiv.appendChild(input);
+      `<br>`
+      let button=document.createElement("button");
+      button.setAttribute("id","button")
+      button.innerHTML="AddList"
+      mainDiv.appendChild(button);
+      mainDiv.appendChild(btn1)
+
+
+      
+      button.addEventListener("click" ,function(){
+            // let input=getElementById("input");
+            
+          let h2=document.createElement("h4");
+          h2.setAttribute("id","task")
+
+          
+          h2.innerHTML=input.value;
+          
+          // let input=document.createElement("input");
+          // input.setAttribute("id","input")
+          // mainDiv.prepend(input);
+          mainDiv.prepend(h2);
+          input.value="";
+    })
+
+          
+
+
+  btn1.addEventListener("click" ,function(){
+
+      let mainDiv=document.createElement("mainDiv");
+      mainDiv.setAttribute("id","mainDiv")
+      document.body.appendChild(mainDiv)
+      let input=document.createElement("input");
+      input.setAttribute("id", "input")
+      
+      mainDiv.appendChild(input);
+      `<br>`
+      let button=document.createElement("button");
+      button.setAttribute("id","button")
+      button.innerHTML="AddList"
+      mainDiv.appendChild(button);
+      mainDiv.appendChild(btn1)
+    //   show();
+      
+    // function show(){
+        
+        
+        button.addEventListener("click" ,function(){
+            // let input=getElementById("input");
+            
+          let h2=document.createElement("h4");
+          h2.setAttribute("id","task")
+
+          
+          h2.innerHTML=input.value;
+          
+          // let input=document.createElement("input");
+          // input.setAttribute("id","input")
+          // mainDiv.prepend(input);
+          mainDiv.prepend(h2);
+          input.value="";
+          
+          
+          //  let para=document.createElement("p");
+          
+          //  mainDiv.appendChild(para).
+          // para.innerHTML=input.value;
+          
+          //  let button=document.createElement("button");
+          //  button.setAttribute("id","button")
+          
+          // button.innerHTML="AddList"
+          //  mainDiv.appendChild(button);
+          
+        })
+    })
+        
+    // }
+
+
+
+    </script>
+</body>
+</html>
